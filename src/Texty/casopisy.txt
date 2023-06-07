@@ -1,0 +1,4 @@
+Zem a vek;5.99;BIELA;20;CA123456;Nezavisle spravodajstvo
+Zahrada;2.37;ZLTA;30;ZAHRADA2;Zahradkari
+Nove byvanie;3.21;ZELENA;45;MAGAZINSK;Byvanie
+Enigma;1.29;BIELA;20;ENIGMASK;HistoriaEnigma

@@ -1,0 +1,6 @@
+Atomove navyky;19.99;BIELA;308;SK21385468979;James Cameron
+Kto chyta v zite;15.67;ZLTA;157;SK0000235677;Jerome David Salinger
+Maco Mliec;10.27;BIELA;53;SK00000000123;Jozef Gregor-Tajovský
+Preco spime;15.89;MODRA;412;SK123456789;Matthew Walker
+Charlieho malé tajomstvá;9.95;ZELENA;208;SK54654321321;Stephen Chbosky
+Harry Potter a Polovičný princ;15.90;ZELENA;544;SK46531213546;J.K. Rowling
