@@ -7,7 +7,7 @@ public class Zakaznik {
 
     private String meno;
 
-    //Konštruktor zákaznika
+    //KonÅ¡truktor zÃ¡kaznika
     public Zakaznik(String meno, String priezvisko) {
         this.meno = meno;
         this.priezvisko = priezvisko;
@@ -18,7 +18,7 @@ public class Zakaznik {
 
     private final int maxPocetVypoziciek = 5;
 
-    /** Konštruktor pre zakaznika ktorı vytvorí pole vıpoièky s dlkou pola maxPocetVypoziciek (5) */
+    /** KonÅ¡truktor pre zakaznika ktorÃ½ vytvorÃ­ pole vÃ½poÅ¾iÄky s dlÅ¾kou pola maxPocetVypoziciek (5) */
     public Zakaznik() {
         vypozicky = new VypozicnyPredmet[maxPocetVypoziciek];
     }
@@ -51,31 +51,31 @@ public class Zakaznik {
         return maxPocetVypoziciek;
     }
 
-    // Na zaèiatku overím èi nejde do metódy null
+    // Na zaÄiatku overÃ­m Äi nejde do metÃ³dy null
     public boolean pozicajSiPredmet(VypozicnyPredmet predmet){
         if (predmet != null){
-            //Zistím èi nepresiahol zakaznik poèet vıpoièiek
+            //ZistÃ­m Äi nepresiahol zakaznik poÄet vÃ½poÅ¾iÄiek
             if (getPocetVypoziciek() < maxPocetVypoziciek) {
-                // Prechádzam v cykle for vıpoièky
+                // PrechÃ¡dzam v cykle for vÃ½poÅ¾iÄky
                 for (int i = 0 ; i < vypozicky.length ; i++) {
-                    // Ak sa zhoduje predmet s predmetom vo vıpoièkach tak u je vypoièanı
+                    // Ak sa zhoduje predmet s predmetom vo vÃ½poÅ¾iÄkach tak uÅ¾ je vypoÅ¾iÄanÃ½
                     if (vypozicky[i] == predmet){
-                        System.out.println("Predmet u je vypoièanı");
+                        System.out.println("Predmet uÅ¾ je vypoÅ¾iÄanÃ½");
                     }
-                    // Ak vypoièanı nieje dostane sa program sem a overi èí je pole prazdne ak ano vloí doò predmet
+                    // Ak vypoÅ¾iÄanÃ½ nieje dostane sa program sem a overi ÄÃ­ je pole prazdne ak ano vloÅ¾Ã­ doÅˆ predmet
                     if (vypozicky[i] == null){
                         vypozicky[i] = predmet;
-                        System.out.println("Predmet bol zapoièanı");
+                        System.out.println("Predmet bol zapoÅ¾iÄanÃ½");
                         return true;
                     }
                 }
-            }else System.out.println("Poèet vıpoièiek bol presihnutı");
+            }else System.out.println("PoÄet vÃ½poÅ¾iÄiek bol presihnutÃ½");
         }else System.out.println("Predmet neexistuje");
         return false;
     }
 
-    //Metoda prechadza v cykle for vypozièky a pripoèitava do pocet +1 ak je na poli nejaky predmet.
-    //Na konci vrati int pocet ktoré reprezentuje pocet predmetov v poli
+    //Metoda prechadza v cykle for vypoziÄky a pripoÄitava do pocet +1 ak je na poli nejaky predmet.
+    //Na konci vrati int pocet ktorÃ© reprezentuje pocet predmetov v poli
     public int getPocetVypoziciek(){
         int pocet = 0;
         for (int i = 0 ; i < vypozicky.length ; i++){
@@ -85,24 +85,24 @@ public class Zakaznik {
         }
         return pocet;
     }
-    // testovacia metoda ktora vypise vypozicky pouíval som pri písani kodu ako pomôcku èi funguju bloky kodov
+    // testovacia metoda ktora vypise vypozicky pouÅ¾Ã­val som pri pÃ­sani kodu ako pomÃ´cku Äi funguju bloky kodov
     public void vypisVypozicky(){
         boolean jePrazdne = true;
 
-        // V cykle for prejdem vypozicky a zisujem èi je tam nejakı predmet ak ano tak jePrazdne sa zmeni na true
+        // V cykle for prejdem vypozicky a zisÅ¥ujem Äi je tam nejakÃ½ predmet ak ano tak jePrazdne sa zmeni na true
         for (int i = 0; i < vypozicky.length; i++) {
             if (vypozicky[i] != null) {
                 jePrazdne = false;
                 break;
             }
         }
-        //Ak je hodnota jePrazdne false ( v poli sa nenachadzaju predmety) vypíše sa e je pole prazdne
+        //Ak je hodnota jePrazdne true ( v poli sa nenachadzaju predmety) vypÃ­Å¡e sa Å¾e je pole prazdne
         if (jePrazdne){
-            System.out.println("Aktuálne zákaznik nemá vypoièané niè");
-            // inak sa vykoná nasledujuci vípis  vıpoièiek  vo formáte :
+            System.out.println("AktuÃ¡lne zÃ¡kaznik nemÃ¡ vypoÅ¾iÄanÃ© niÄ");
+            // inak sa vykonÃ¡ nasledujuci vÃ­pis  vÃ½poÅ¾iÄiek  vo formÃ¡te :
             // Index ; Predmet ; Nazov ; Cena ; Farba
         }else {
-            System.out.println("Zakaznik ma aktualne vypoièané nasledovné predmety :");
+            System.out.println("Zakaznik ma aktualne vypoÅ¾iÄanÃ© nasledovnÃ© predmety :");
             for (int i = 0 ; i < vypozicky.length ; i++){
                 if (vypozicky[i] != null){
                     VypozicnyPredmet predmet = vypozicky[i];
@@ -113,8 +113,8 @@ public class Zakaznik {
 
         }
     }
-    // Na vstupe mi pride predmet , potom v cykle for porovnávam tento predmet s predmetom v poli
-    // Keï sa predmety zhoduju tak predmet vo vypozickach dostane hodnotu null take je v podstate zmazanı
+    // Na vstupe mi pride predmet , potom v cykle for porovnÃ¡vam tento predmet s predmetom v poli
+    // KeÄ sa predmety zhoduju tak predmet vo vypozickach dostane hodnotu null takÅ¾e je v podstate zmazanÃ½
     public boolean vratPredmet(VypozicnyPredmet predmet){
         for (int i = 0 ; i < vypozicky.length ; i++){
             if (vypozicky[i] == predmet){
@@ -123,7 +123,7 @@ public class Zakaznik {
         }
         return true;
     }
-    //Vracia predmet na indexe v poli vıpoièky
+    //Vracia predmet na indexe v poli vÃ½poÅ¾iÄky
     public VypozicnyPredmet getPredmetNaIndexe(int index){
         return vypozicky[index];
     }
